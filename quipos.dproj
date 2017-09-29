@@ -1,0 +1,1879 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3A8B3C2C-C775-424B-80C4-0692E10D0061}</ProjectGuid>
+        <MainSource>quipos.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.2</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>quipos</SanitizedProjectName>
+        <DCC_DependencyCheckOutputName>..\exe\quipos.exe</DCC_DependencyCheckOutputName>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Xml.Win;VCLTee;Bde;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Release>93</VerInfo_Release>
+        <VerInfo_MinorVer>7</VerInfo_MinorVer>
+        <VerInfo_MajorVer>2</VerInfo_MajorVer>
+        <DCC_S>false</DCC_S>
+        <DCC_MapFile>3</DCC_MapFile>
+        <DCC_F>false</DCC_F>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_N>true</DCC_N>
+        <DCC_E>false</DCC_E>
+        <DCC_ExeOutput>C:\software\quipos\exe</DCC_ExeOutput>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=2.7.93.1247;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=2.7.93.1247</VerInfo_Keys>
+        <DCC_DcuOutput>C:\software\quipos\dcu</DCC_DcuOutput>
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_K>false</DCC_K>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Build>1247</VerInfo_Build>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <VerInfo_MinorVer>8</VerInfo_MinorVer>
+        <VerInfo_Keys>CompanyName=;FileVersion=2.8.11.1288;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=2.8.11.1288;ProgramID=com.embarcadero.$(ModuleName);FileDescription=$(ModuleName);ProductName=$(ModuleName)</VerInfo_Keys>
+        <Icon_MainIcon>quipos_Icon6.ico</Icon_MainIcon>
+        <Manifest_File>None</Manifest_File>
+        <VerInfo_Build>1288</VerInfo_Build>
+        <VerInfo_Release>11</VerInfo_Release>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Release>67</VerInfo_Release>
+        <VerInfo_MinorVer>8</VerInfo_MinorVer>
+        <VerInfo_Build>1454</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Quipos Tecnologia LTDA;FileVersion=2.8.67.1454;InternalName=26/04/2017;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=2.8.67.1454;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Release>5</VerInfo_Release>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_MinorVer>9</VerInfo_MinorVer>
+        <VerInfo_Build>1526</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=Quipos Tecnologia LTDA;FileVersion=2.9.5.1526;InternalName=27/09/2017;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=2.9.5.1526;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="uMain.pas">
+            <Form>frmmain</Form>
+        </DCCReference>
+        <DCCReference Include="usaida.pas">
+            <Form>frmsaida</Form>
+        </DCCReference>
+        <DCCReference Include="ucondpagto.pas">
+            <Form>frmCondPagto</Form>
+        </DCCReference>
+        <DCCReference Include="uempresa.pas">
+            <Form>frmEmpresa</Form>
+        </DCCReference>
+        <DCCReference Include="uFornecedor.pas">
+            <Form>frmFornecedor</Form>
+        </DCCReference>
+        <DCCReference Include="ulocalizar.pas">
+            <Form>frmLocalizar</Form>
+        </DCCReference>
+        <DCCReference Include="ucliente.pas">
+            <Form>frmCliente</Form>
+        </DCCReference>
+        <DCCReference Include="uDtmMain.pas">
+            <Form>dtmmain</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uEtapa.pas">
+            <Form>frmEtapa</Form>
+        </DCCReference>
+        <DCCReference Include="uFuncionario.pas">
+            <Form>frmFuncionario</Form>
+        </DCCReference>
+        <DCCReference Include="ucontrato.pas">
+            <Form>frmContrato</Form>
+        </DCCReference>
+        <DCCReference Include="uFaturamento.pas">
+            <Form>frmFaturamento</Form>
+        </DCCReference>
+        <DCCReference Include="uLocacao.pas">
+            <Form>frmlocacao</Form>
+        </DCCReference>
+        <DCCReference Include="uFaturamentoTipo.pas">
+            <Form>frmFaturamentoTipo</Form>
+        </DCCReference>
+        <DCCReference Include="uacbr.pas">
+            <Form>frmsetacbr</Form>
+        </DCCReference>
+        <DCCReference Include="uveiculo.pas">
+            <Form>frmVeiculo</Form>
+        </DCCReference>
+        <DCCReference Include="uRichEdit.pas">
+            <Form>frmRichEdit</Form>
+        </DCCReference>
+        <DCCReference Include="ucte.pas">
+            <Form>frmCTE</Form>
+        </DCCReference>
+        <DCCReference Include="uuf.pas">
+            <Form>frmUF</Form>
+        </DCCReference>
+        <DCCReference Include="uConstantes.pas"/>
+        <DCCReference Include="uitsaidaimportacao.pas">
+            <Form>frmdlgitsaidaimportacao</Form>
+        </DCCReference>
+        <DCCReference Include="urota.pas">
+            <Form>frmrota</Form>
+        </DCCReference>
+        <DCCReference Include="utarefa.pas">
+            <Form>frmdlgtarefa</Form>
+        </DCCReference>
+        <DCCReference Include="urpa.pas">
+            <Form>frmRPA</Form>
+        </DCCReference>
+        <DCCReference Include="utransportadora.pas">
+            <Form>frmTransportadora</Form>
+        </DCCReference>
+        <DCCReference Include="uctetransportadora.pas">
+            <Form>frmctetransportadora</Form>
+        </DCCReference>
+        <DCCReference Include="utabela.pas">
+            <Form>frmTabela1</Form>
+        </DCCReference>
+        <DCCReference Include="uprojeto.pas">
+            <Form>frmdlgProjeto</Form>
+        </DCCReference>
+        <DCCReference Include="uagenda.pas">
+            <Form>frmagenda</Form>
+        </DCCReference>
+        <DCCReference Include="uitagenda.pas">
+            <Form>frmdlgitagenda</Form>
+        </DCCReference>
+        <DCCReference Include="umetrologia.pas">
+            <Form>frmMetrologia</Form>
+        </DCCReference>
+        <DCCReference Include="uEquipamento.pas">
+            <Form>frmEquipamento</Form>
+        </DCCReference>
+        <DCCReference Include="ueventoemail.pas">
+            <Form>frmEventoEmail</Form>
+        </DCCReference>
+        <DCCReference Include="upaciente.pas">
+            <Form>frmPaciente</Form>
+        </DCCReference>
+        <DCCReference Include="uprofissional.pas">
+            <Form>frmProfissional</Form>
+        </DCCReference>
+        <DCCReference Include="ucontratonegociacao.pas">
+            <Form>frmdlgGerarNegociacaoContrato</Form>
+        </DCCReference>
+        <DCCReference Include="uembarque.pas">
+            <Form>frmEmbarque</Form>
+        </DCCReference>
+        <DCCReference Include="uworkbox.pas">
+            <Form>frmWorkBox</Form>
+        </DCCReference>
+        <DCCReference Include="uordserv.pas">
+            <Form>frmOrdServ</Form>
+        </DCCReference>
+        <DCCReference Include="utransporte.pas">
+            <Form>frmtransporte</Form>
+        </DCCReference>
+        <DCCReference Include="uGrupos.pas">
+            <Form>frmGrupos</Form>
+        </DCCReference>
+        <DCCReference Include="umdfe.pas">
+            <Form>frmmdfe</Form>
+        </DCCReference>
+        <DCCReference Include="uimportacao.pas">
+            <Form>frmImportacao</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.Status.pas">
+            <Form>frmstacbr</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.NfeReport.pas">
+            <Form>frmnfereport</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.MdfeReport.pas">
+            <Form>frmmdfereport</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.EntradaImportarxml.pas">
+            <Form>frmentradaimportarxml</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.CteReport.pas">
+            <Form>frmctereport</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.CartaCorrecao.pas">
+            <Form>frmdlgcartacorrecao</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.CartaCorrecaoCTE.pas">
+            <Form>frmcartacorrecaocte</Form>
+        </DCCReference>
+        <DCCReference Include="ACBR\ACBR.NFSE.pas"/>
+        <DCCReference Include="ACBR\ACBR.Boleto.pas"/>
+        <DCCReference Include="ACBR\ACBR.NFEABR.pas"/>
+        <DCCReference Include="ACBR\ACBR.NFE.pas"/>
+        <DCCReference Include="ACBR\ACBR.ACBR.pas"/>
+        <DCCReference Include="ACBR\ACBR.CTEGerar.pas"/>
+        <DCCReference Include="Aquisicao\Aquisicao.Entrada.pas">
+            <Form>frmentrada</Form>
+        </DCCReference>
+        <DCCReference Include="Aquisicao\Aquisicao.PedidoMaterial.pas">
+            <Form>frmPedidoMaterial</Form>
+        </DCCReference>
+        <DCCReference Include="Aquisicao\Aquisicao.OrdCompra.pas">
+            <Form>frmOrdCompra</Form>
+        </DCCReference>
+        <DCCReference Include="classe\classe.orcamentocopiar.pas"/>
+        <DCCReference Include="classe\Classe.CriterioReport.pas"/>
+        <DCCReference Include="classe\Classe.CalculoPrestacao.pas"/>
+        <DCCReference Include="classe\Classe.ORM.pas"/>
+        <DCCReference Include="classe\Classe.DAO.pas"/>
+        <DCCReference Include="classe\Classe.Conection.pas"/>
+        <DCCReference Include="classe\Classe.ManagerAutpagto.pas"/>
+        <DCCReference Include="classe\Classe.Conexao.pas"/>
+        <DCCReference Include="classe\Classe.ImpressaoMatricial.pas"/>
+        <DCCReference Include="classe\Classe.ProdutoFGerarBaixaEstoqueSubProduto.pas"/>
+        <DCCReference Include="classe\Classe.Localizar.pas"/>
+        <DCCReference Include="classe\Classe.GerarCustoMedioLivroProducao.pas"/>
+        <DCCReference Include="classe\Classe.Interna.pas"/>
+        <DCCReference Include="classe\Classe.Generics.pas"/>
+        <DCCReference Include="classe\Classe.DebitoAutomatico.pas"/>
+        <DCCReference Include="classe\classe.Versao.pas"/>
+        <DCCReference Include="classe\classe.Registro.pas"/>
+        <DCCReference Include="classe\classe.form.pas"/>
+        <DCCReference Include="classe\classe.mensagem.pas"/>
+        <DCCReference Include="classe\Classe.Main.pas"/>
+        <DCCReference Include="classe\classe.Caixafinanceiro.pas"/>
+        <DCCReference Include="classe\classe.LivroFiscal.pas"/>
+        <DCCReference Include="classe\classe.LivroFiscalDigital.pas"/>
+        <DCCReference Include="classe\classe.gerar.pas"/>
+        <DCCReference Include="classe\classe.Registrainformacao.pas"/>
+        <DCCReference Include="classe\classe.relatorio.pas"/>
+        <DCCReference Include="classe\classe.Endereco.pas"/>
+        <DCCReference Include="classe\classe.Executasql.pas"/>
+        <DCCReference Include="classe\classe.impressaoreport.pas"/>
+        <DCCReference Include="classe\classe.gerarautpagto.pas"/>
+        <DCCReference Include="classe\classe.CopiarRegistro.pas"/>
+        <DCCReference Include="classe\classe.ColumnField.pas"/>
+        <DCCReference Include="classe\classe.Calculopeso.pas"/>
+        <DCCReference Include="classe\classe.Etiqueta.pas"/>
+        <DCCReference Include="classe\classe.Aplicacao.pas"/>
+        <DCCReference Include="classe\classe.DifAliquota.pas"/>
+        <DCCReference Include="classe\classe.sintegra.pas"/>
+        <DCCReference Include="classe\classe.query.pas"/>
+        <DCCReference Include="classe\classe.efdpiscofins.pas"/>
+        <DCCReference Include="classe\classe.email.pas"/>
+        <DCCReference Include="classe\classe.InstrucaoSQL.pas"/>
+        <DCCReference Include="Comercial\Comercial.ConferenciaPedido.pas">
+            <Form>frmConferenciaPedido</Form>
+        </DCCReference>
+        <DCCReference Include="Comercial\Comercial.Pedido.pas">
+            <Form>frmPedido</Form>
+        </DCCReference>
+        <DCCReference Include="Comercial\Comercial.Representante.pas">
+            <Form>frmRepresentante</Form>
+        </DCCReference>
+        <DCCReference Include="Comercial\Comercial.Orcamento.pas">
+            <Form>frmOrcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Comercial\Comercial.PedidoBalcao.pas">
+            <Form>frmPedidoBalcao</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Pedido.pas">
+            <Form>frmConsultaPedido</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Representante.pas">
+            <Form>frmConsultaRepresentante</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Autpagto.pas">
+            <Form>frmConsultaAutpagto</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Cliente.pas">
+            <Form>frmConsultaCliente</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Duplicata.pas">
+            <Form>frmConsultaDuplicata</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Entrada.pas">
+            <Form>frmConsultaEntrada</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Movbancario.pas">
+            <Form>frmConsultaMovBancario</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Movto.pas">
+            <Form>frmConsultaMovto</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Produto.pas">
+            <Form>frmConsultaProduto</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Saida.pas">
+            <Form>frmConsultaSaida</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Cheque.pas">
+            <Form>frmConsultaCheque</Form>
+        </DCCReference>
+        <DCCReference Include="Consulta\Consulta.Consulta.pas">
+            <Form>frmconsulta</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.ExportarExcel.pas">
+            <Form>frmExporExcel</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Versao.pas">
+            <Form>frmVersao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Login.pas">
+            <Form>frmLogin</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Progressbar.pas">
+            <Form>frmprogressbar</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Release.pas">
+            <Form>frmRelease</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Negociacao.pas">
+            <Form>frmnegociacao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Para.pas">
+            <Form>frmpara</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.MudarEtapa.pas">
+            <Form>frmmudaretapa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.MarkupEntrada.pas">
+            <Form>frmmarkupentrada</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.ProdutoInsercaoCdbarras.pas">
+            <Form>frmprodutoinsercaocdbarras</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.ExibirCampos.pas">
+            <Form>frmexibircampos</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.SelecionarEntrada.pas">
+            <Form>frmSelecionarEntrada</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.SetChangeTarefa.pas">
+            <Form>frmsetchangetarefa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.SelecionarCertificado.pas">
+            <Form>frmSelecionarCertificado</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Anotacao.pas">
+            <Form>frmAnotacao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.DBMemo.pas">
+            <Form>frmdbMemo</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.AssinaturaDigital.pas">
+            <Form>frmAssinaturaDigital</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Configuracao.pas">
+            <Form>frmConfiguracao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.AnaliseCritica.pas">
+            <Form>frmdlganalisecritica</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Download.pas">
+            <Form>frmdownload</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.DeclinarOrcamento.pas">
+            <Form>frmdlgdeclinarorcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.LoteSerie.pas">
+            <Form>frmloteserie</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarOrdCompra.pas">
+            <Form>frmGerarOrdCompra</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.FiltrarOrdServ.pas">
+            <Form>frmfiltrarOrdServ</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarDevolucao.pas">
+            <Form>frmGerarDevolucao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarCompra.pas">
+            <Form>frmgerarCompra</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Gerarpedido.pas">
+            <Form>frmdlgGerarPedido</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.FiltrarTarefa.pas">
+            <Form>frmFiltrarTarefa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.FiltrarProjeto.pas">
+            <Form>frmFiltrarProjeto</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarSaida.pas">
+            <Form>frmdlgGerarSaida</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.TransferirAdntcliente.pas">
+            <Form>frmdlgtransferiradntcliente</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.AplicarConfiguracaoGrupo.pas">
+            <Form>frmdlgaplicarconfiguracaogrupo</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.InfNumIntervencao.pas">
+            <Form>frmdlginfNumIntervencao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.RichEdit.pas">
+            <Form>frmdlgrichedit</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.XMLToTreeview.pas">
+            <Form>frmdlgxmltotreeview</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.InutilizarNFE.pas">
+            <Form>frmdlginutilizarnfe</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.AprovarConciliado.pas">
+            <Form>frmdlgaprovarconciliado</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.DataBalanco.pas">
+            <Form>frmdlgdatabalanco</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Selecionar.pas">
+            <Form>frmdlgselecionar</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.CalculoPeso.pas">
+            <Form>frmcalculopeso</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.FaturamentoProduto.pas">
+            <Form>frmdlgfaturamentoproduto</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.AvaliacaoIQF.pas">
+            <Form>frmdlgavaliacaoiqf</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.EscolhePedido.pas">
+            <Form>frmdlgEscolhePedido</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.DesenhoOrcamento.pas">
+            <Form>frmdlgdesenhoorcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarMovto.pas">
+            <Form>frmdlgGerarMovto</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarDevolucaoSaida.pas">
+            <Form>frmdglgerardevolucaosaida</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.InutilizarCTE.pas">
+            <Form>frmdlginutilizarcte</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.SequenciaImpressao.pas">
+            <Form>frmdlgsequenciaimpressao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Detalhe.Orcamento.pas">
+            <Form>frmdlgdetalheorcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.EntradaProduto.pas">
+            <Form>frmdlgentradaproduto</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.ChaveUso.pas">
+            <Form>frmdlgchaveuso</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.MetodoProcesso.pas">
+            <Form>frmdlgmetodoprocesso</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.SelecionarLista.pas">
+            <Form>frmdlgselecionarlista</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.SetAvisoTarefa.pas">
+            <Form>frmdlgsetavisotarefa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.AvisoTarefa.pas">
+            <Form>frmdlgavisotarefa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.LocacaoDevolucao.pas">
+            <Form>frmdlglocacaodevolucao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Tabela.pas">
+            <Form>frmdlttabela</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Arquivo.pas">
+            <Form>frmdlgarquivo</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Apontamento.pas">
+            <Form>frmdlgapontamento</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Etiqueta.pas">
+            <Form>frmdlgetiqueta</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Lista.pas">
+            <Form>frmdlglista</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.TransferenciaBancaria.pas">
+            <Form>frmdlgtransferenciabancaria</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarAdiantamento.pas">
+            <Form>frmdlgAdntcliente</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.GerarMovimentacao.pas">
+            <Form>frmdlgDespesa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.ClienteFinanceiro.pas">
+            <Form>frmdlgclientefinanceiro</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.DuplicataCliente.pas">
+            <Form>frmdlgduplicatacliente</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.HPedidoEtapa.pas">
+            <Form>frmdlghpedidoetapa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Justificativa.pas">
+            <Form>frmdlgjustificativa</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.OrdproducaoPesagem.pas">
+            <Form>frmdlgordprodcaopesagem</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.MapaProducaoProduto.pas">
+            <Form>frmdlgmapaproducaoproduto</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Tipo.pas">
+            <Form>frmdlgTipo</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.CalculoPrestacao.pas">
+            <Form>frmdlgCalculoPrestacao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.OrdcompraAprovacao.pas">
+            <Form>frmdlgOrdcompraAprovacao</Form>
+        </DCCReference>
+        <DCCReference Include="Dialogo\Dialogo.Gerarprodutomensalidade.pas">
+            <Form>frmfaturamentodlggerarprodutomensalidade</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.Movto.pas">
+            <Form>frmmovto</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.Grupo.pas">
+            <Form>frmgrupo</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.Rim.pas">
+            <Form>frmrim</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.Baixa.pas">
+            <Form>frmBaixaEstoque</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.Dialogo.BaixaRequisicao.pas">
+            <Form>frmBaixaRequisicao</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.Produto.pas">
+            <Form>frmProduto</Form>
+        </DCCReference>
+        <DCCReference Include="Estoque\Estoque.grade.pas">
+            <Form>frmgrade</Form>
+        </DCCReference>
+        <DCCReference Include="Exportacao\Exportacao.SaidaAlterdataSACA.pas"/>
+        <DCCReference Include="Exportacao\Datasul\Exportacao.Datasul.Duplicata.pas"/>
+        <DCCReference Include="Exportacao\Datasul\Exportacao.Datasul.cte.pas"/>
+        <DCCReference Include="Exportacao\Datasul\Exportacao.Datasul.contabil.pas"/>
+        <DCCReference Include="Exportacao\Datasul\Exportacao.Datasul.Autpagto.pas"/>
+        <DCCReference Include="Exportacao\Datasul\Exportacao.Datasul.Movto.pas"/>
+        <DCCReference Include="Financeiro\Financeiro.AutpagtoParcelamento.pas">
+            <Form>frmdlgGerarParcelamentoAutpagto</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Adntcliente.pas">
+            <Form>frmAdntCliente</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Adntfornecedor.pas">
+            <Form>frmAdntFornecedor</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Autpagto.pas">
+            <Form>frmAutPagto</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Duplicata.pas">
+            <Form>frmDuplicata</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.plcontarateio.pas">
+            <Form>frmplcontarateio</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Cheque.pas">
+            <Form>frmcheque</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Conta.pas">
+            <Form>frmConta</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.DuplicataParcelamento.pas">
+            <Form>frmdlgGerarParcelamentoDuplicata</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.RateioPlconta.pas">
+            <Form>frmRateioPlConta</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.RateioCntcusto.pas">
+            <Form>frmRateioCntcusto</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Movbancario.pas">
+            <Form>frmmovbancario</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.YMOFXReader.pas"/>
+        <DCCReference Include="Financeiro\Financeiro.Caixafinanceiro.pas">
+            <Form>frmcaixafinanceiro</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Parcelamento.pas">
+            <Form>frmparcelamento</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Cobranca.pas">
+            <Form>frmCobranca</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.Plconta.pas">
+            <Form>frmplconta</Form>
+        </DCCReference>
+        <DCCReference Include="Financeiro\Financeiro.baixa.pas">
+            <Form>frmbaixa</Form>
+        </DCCReference>
+        <DCCReference Include="Fiscal\Fiscal.Livro.pas">
+            <Form>frmlivro</Form>
+        </DCCReference>
+        <DCCReference Include="Fiscal\Fiscal.Regrast.pas">
+            <Form>frmRegrast</Form>
+        </DCCReference>
+        <DCCReference Include="Fiscal\Fiscal.Cfop.pas">
+            <Form>frmcfop</Form>
+        </DCCReference>
+        <DCCReference Include="Fiscal\Fiscal.AtivoPisCofins.pas">
+            <Form>frmativopiscofins</Form>
+        </DCCReference>
+        <DCCReference Include="Fiscal\Fiscal.Livrop3.pas">
+            <Form>frmlivroP3</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Cobranca.pas">
+            <Form>frmManagerDuplicata</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Financeiro.pas">
+            <Form>frmManagerAutPagto</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Usuario.pas">
+            <Form>frmManagerUser</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Pedido.pas">
+            <Form>frmmanagerpedido</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Geerenciador.Produto.pas">
+            <Form>frmManagerproduto</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Tarefa.pas">
+            <Form>frmmanagertarefa</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Gerenciador.pas">
+            <Form>frmManager</Form>
+        </DCCReference>
+        <DCCReference Include="Gerenciador\Gerenciador.Ordproducao.pas">
+            <Form>frmmanagerordproducao</Form>
+        </DCCReference>
+        <DCCReference Include="Importacao\Importacao.CTE.pas"/>
+        <DCCReference Include="Importacao\Importacao.Inventario.pas"/>
+        <DCCReference Include="Importacao\Importacao.DOVerleih.pas"/>
+        <DCCReference Include="Importacao\Importacao.Senior.pas"/>
+        <DCCReference Include="Importacao\Importacao.XML.pas"/>
+        <DCCReference Include="Importacao\Importacao.Gesoft.pas"/>
+        <DCCReference Include="Importacao\Importacao.Excel.pas"/>
+        <DCCReference Include="Importacao\Importacao.dados.pas"/>
+        <DCCReference Include="Importacao\Importacao.cliente.pas"/>
+        <DCCReference Include="Importacao\Importacao.Fornecedor.pas"/>
+        <DCCReference Include="Importacao\Importacao.Transportadora.pas"/>
+        <DCCReference Include="Importacao\Importacao.IPonto.pas"/>
+        <DCCReference Include="Impressao\Impressao.Report.pas">
+            <Form>frmReport</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.Rotina.FastFunc.pas"/>
+        <DCCReference Include="Impressao\Impressao.ReportUser.pas">
+            <Form>frmReportUser</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.MenuRelatorio.pas">
+            <Form>DTModuleMenuRelat</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.ReportDesigner.pas">
+            <Form>frmreportdesigner</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.EstoqueCompleto.pas">
+            <Form>frmestoquecompleto</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.ReferenciaCruzada.pas">
+            <Form>frmreferenciacruzada</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.ProdutoEstoqueDiario.pas">
+            <Form>frmconsultaProdutoImprimirEstoquediario</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.LivroProducao.pas">
+            <Form>frmLivroProducaoImprimir</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.OrdservOrcamentoAvulso.pas"/>
+        <DCCReference Include="Impressao\Impressao.OrdservOrcamentoContrato.pas"/>
+        <DCCReference Include="Impressao\Impressao.OrdservWordEntregaSemComprovante.pas"/>
+        <DCCReference Include="Impressao\Impressao.AdntclienteFichaSaldo.pas"/>
+        <DCCReference Include="Impressao\Impressao.AdntclienteSaldo.pas"/>
+        <DCCReference Include="Impressao\Impressao.AdntclienteSaldoDiario.pas"/>
+        <DCCReference Include="Impressao\Impressao.CntcustoConsumoSemestral.pas"/>
+        <DCCReference Include="Impressao\Impressao.AcompanhamentoVenda.pas"/>
+        <DCCReference Include="Impressao\Impressao.CorridaCertificado.pas"/>
+        <DCCReference Include="Impressao\Impressao.ExtratoConta.pas"/>
+        <DCCReference Include="Impressao\Impressao.RelatorioPadrao.pas"/>
+        <DCCReference Include="Impressao\Impressao.SinteticoAutpagtoCntcusto.pas"/>
+        <DCCReference Include="Impressao\Impressao.FluxoCaixa.pas"/>
+        <DCCReference Include="Impressao\Impressao.FluxoCaixaRealizado.pas"/>
+        <DCCReference Include="Impressao\Impressao.DREAnalitico075.pas"/>
+        <DCCReference Include="Impressao\Impressao.Balancete076.pas"/>
+        <DCCReference Include="Impressao\Impressao.DRE077.pas"/>
+        <DCCReference Include="Impressao\Impressao.DREAnalitico078.pas"/>
+        <DCCReference Include="Impressao\Impressao.Balancete079.pas"/>
+        <DCCReference Include="Impressao\Impressao.Balancete080.pas"/>
+        <DCCReference Include="Impressao\Impressao.DREAnalitico082.pas"/>
+        <DCCReference Include="Impressao\Impressao.DRE081.pas"/>
+        <DCCReference Include="Impressao\Impressao.OrdproducaoPesagem.pas"/>
+        <DCCReference Include="Impressao\Impressao.FuncionarioCestaBasica.pas"/>
+        <DCCReference Include="Impressao\Impressao.MapaFreteMensal.pas"/>
+        <DCCReference Include="Impressao\Impressao.GraticoTpparada.pas"/>
+        <DCCReference Include="Impressao\Impressao.GraficoParetoTpparada.pas"/>
+        <DCCReference Include="Impressao\Impressao.PedidoAtendimento.pas"/>
+        <DCCReference Include="Impressao\Impressao.ConsultaProdutoConsumo.pas"/>
+        <DCCReference Include="Impressao\Impressao.DRE074.pas"/>
+        <DCCReference Include="Impressao\Impressao.Fatura643.pas"/>
+        <DCCReference Include="Impressao\Impressao.PedidoMaterial.pas"/>
+        <DCCReference Include="Impressao\Impressao.MovimentacaoFinanceira.pas"/>
+        <DCCReference Include="Impressao\Impressao.InventarioEstoque.pas"/>
+        <DCCReference Include="Impressao\Impressao.ProdutoFichaMovimentacao.pas">
+            <Form>frmconsultaProdutoImprimirFichaMovimentacao</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.ProdutoMovimentoAnalitico.pas">
+            <Form>frmconsultaProdutoImprimirMovimentoAnalitico</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.ProdutoFichaMovimentacaoterceiro.pas">
+            <Form>frmconsultaProdutoImprimirFichaMovimentacao1</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.SaidaFreteMensaluf.pas">
+            <Form>frmconsultasaidaImprimirFreteMensaluf</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.SaidaReferenciaCruzada.pas">
+            <Form>frmconsultasaidareferenciacruzada</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.SaidaMensalProdutoPM.pas">
+            <Form>frmconsultasaidaImprimirMensalProdutoPM</Form>
+        </DCCReference>
+        <DCCReference Include="Impressao\Impressao.SaidaMensalProdutoPP.pas">
+            <Form>frmconsultasaidaImprimirMensalProdutoPP</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Equipamento.pas">
+            <Form>frmLocalizarEquipamento</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Movbancario.pas">
+            <Form>frmLocalizarMovBancario</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Pedido.pas">
+            <Form>frmLocalizarPedido</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Cliente.pas">
+            <Form>frmLocalizarcliente</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Saida.pas">
+            <Form>frmLocalizarSaida</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Transportadora.pas">
+            <Form>frmLocalizarTransportadora</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Produto.pas">
+            <Form>frmLocalizarProduto</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Cheque.pas">
+            <Form>frmLocalizarCheque</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Contrato.pas">
+            <Form>frmLocalizarContrato</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Fornecedor.pas">
+            <Form>frmLocalizarFornecedor</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.AdntFornecedor.pas">
+            <Form>frmLocalizarAdntFornecedor</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.AutPagto.pas">
+            <Form>frmLocalizarAutPagto</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Entrada.pas">
+            <Form>frmLocalizarEntrada</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Faturamento.pas">
+            <Form>frmLocalizarFaturamento</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.AdntCliente.pas">
+            <Form>frmLocalizarAdntCliente</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Rim.pas">
+            <Form>frmLocalizarRIM</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Funcionario.pas">
+            <Form>frmLocalizarFuncionario</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Locacao.pas">
+            <Form>frmLocalizarLocacao</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Transporte.pas">
+            <Form>frmLocalizartransporte</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Ordcompra.pas">
+            <Form>frmLocalizarOrdCompra</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Movto.pas">
+            <Form>frmLocalizarMovto</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Cobranca.pas">
+            <Form>frmlocalizarcobranca</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Corridaquimica.pas">
+            <Form>frmLocalizarCorridaquimica</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Cte.pas">
+            <Form>frmLocalizarCTE</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Veiculo.pas">
+            <Form>frmLocalizarVeiculo</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Ordproducao.pas">
+            <Form>frmLocalizarOrdProducao</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Rpa.pas">
+            <Form>frmLocalizarRPA</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Ativopiscofins.pas">
+            <Form>frmLocalizarAtivoPISCOFINS</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Itagenda.pas">
+            <Form>frmLocalizaritagenda</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.MDFE.pas">
+            <Form>frmLocalizarMDFE</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.ConferenciaPedido.pas">
+            <Form>frmLocalizarConferenciaPedido</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Metrologia.pas">
+            <Form>frmLocalizarMetrologia</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Formulacao.pas">
+            <Form>frmLocalizarformulacao</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Duplicata.pas">
+            <Form>frmLocalizarduplicata</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Ordserv.pas">
+            <Form>frmLocalizarOrdserv</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.PedidoMaterial.pas">
+            <Form>frmLocalizarPedidoMaterial</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.RequisicaoProducao.pas">
+            <Form>frmLocalizarRequisicaoProducao</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Paciente.pas">
+            <Form>frmLocalizarPaciente</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.RhOcorrencia.pas">
+            <Form>frmLocalizarRHOcorrencia</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\localizar.negociacao.pas">
+            <Form>frmLocalizarnegociacao</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Parada.pas">
+            <Form>frmLocalizarParada</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Embarque.pas">
+            <Form>frmLocalizarEmbarque</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.ApontamentoManual.pas">
+            <Form>frmLocalizarApontamentoManual</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Treinamento.pas">
+            <Form>frmLocalizarTreinamento</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.DespesaConvenio.pas">
+            <Form>frmLocalizardespesaconvenio</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Parcelamento.pas">
+            <Form>frmLocalizarparcelamento</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Livrop3.pas">
+            <Form>frmLocalizarlp1a</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Livro.pas">
+            <Form>frmLocalizarLivro</Form>
+        </DCCReference>
+        <DCCReference Include="Localizar\Localizar.Orcamento.pas">
+            <Form>frmLocalizarOrcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Model\conexao\Model.Conexao.Interfaces.pas"/>
+        <DCCReference Include="Model\conexao\Model.Conexao.Firedac.pas"/>
+        <DCCReference Include="Novo\Novo.Paciente.pas">
+            <Form>frmNovoPaciente</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Produto.pas">
+            <Form>frmNovoProduto</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Fornecedor.pas">
+            <Form>frmNovoFornecedor</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Equipamento.pas">
+            <Form>frmNovoEquipamento</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Cliente.pas">
+            <Form>frmNovoCliente</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Tabela.pas">
+            <Form>frmNovoTabela</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Transportadora.pas">
+            <Form>frmNovoTransportadora</Form>
+        </DCCReference>
+        <DCCReference Include="Novo\Novo.Mensagem.pas">
+            <Form>frmNovaMensagem</Form>
+        </DCCReference>
+        <DCCReference Include="ORM\ORM.Requisicaoproducao.pas"/>
+        <DCCReference Include="ORM\ORM.DocFiscalICMS.pas"/>
+        <DCCReference Include="ORM\ORM.Funcionario.pas"/>
+        <DCCReference Include="ORM\ORM.Representante.pas"/>
+        <DCCReference Include="ORM\ORM.locacao.pas"/>
+        <DCCReference Include="ORM\ORM.ordcompra.pas"/>
+        <DCCReference Include="ORM\ORM.Orcamento.pas"/>
+        <DCCReference Include="ORM\ORM.Movto.pas"/>
+        <DCCReference Include="ORM\ORM.rim.pas"/>
+        <DCCReference Include="ORM\ORM.Ordproducao.pas"/>
+        <DCCReference Include="ORM\ORM.CTE.pas"/>
+        <DCCReference Include="ORM\ORM.Contrato.pas"/>
+        <DCCReference Include="ORM\ORM.Tarefa.pas"/>
+        <DCCReference Include="ORM\ORM.Tabela.pas"/>
+        <DCCReference Include="ORM\ORM.Mdfe.pas"/>
+        <DCCReference Include="ORM\ORM.Regrast.pas"/>
+        <DCCReference Include="ORM\ORM.rota.pas"/>
+        <DCCReference Include="ORM\ORM.Embarque.pas"/>
+        <DCCReference Include="ORM\ORM.Apontamento.pas"/>
+        <DCCReference Include="ORM\ORM.Autpagto.pas"/>
+        <DCCReference Include="ORM\ORM.PontoTrabalho.pas"/>
+        <DCCReference Include="ORM\ORM.Eventoemail.pas"/>
+        <DCCReference Include="ORM\ORM.Paciente.pas"/>
+        <DCCReference Include="ORM\ORM.Serie.pas"/>
+        <DCCReference Include="ORM\ORM.ApontamentoManual.pas"/>
+        <DCCReference Include="ORM\ORM.Participante.pas"/>
+        <DCCReference Include="ORM\ORM.Parcelamento.pas"/>
+        <DCCReference Include="ORM\ORM.Livroproducao.pas"/>
+        <DCCReference Include="ORM\ORM.Importacao.pas"/>
+        <DCCReference Include="ORM\ORM.ItSaidaLote.pas"/>
+        <DCCReference Include="ORM\ORM.SaidaInutilizacao.pas"/>
+        <DCCReference Include="ORM\ORM.CartaCorrecao.pas"/>
+        <DCCReference Include="ORM\ORM.AdicaoImportacao.pas"/>
+        <DCCReference Include="ORM\ORM.ItSaidaImportacao.pas"/>
+        <DCCReference Include="ORM\ORM.SaidaReferenciada.pas"/>
+        <DCCReference Include="ORM\ORM.Itsaidafretesub.pas"/>
+        <DCCReference Include="ORM\ORM.TpSaida.pas"/>
+        <DCCReference Include="ORM\ORM.Empresa.pas"/>
+        <DCCReference Include="ORM\ORM.Movbancario.pas"/>
+        <DCCReference Include="ORM\ORM.Usuario.pas"/>
+        <DCCReference Include="ORM\ORM.Produto.pas"/>
+        <DCCReference Include="ORM\ORM.Cliente.pas"/>
+        <DCCReference Include="ORM\ORM.Faturamento.pas"/>
+        <DCCReference Include="ORM\ORM.Adntcliente.pas"/>
+        <DCCReference Include="ORM\ORM.Cobranca.pas"/>
+        <DCCReference Include="ORM\ORM.Pagtocomissao.pas"/>
+        <DCCReference Include="ORM\ORM.Etapa.pas"/>
+        <DCCReference Include="ORM\ORM.duplicata.pas"/>
+        <DCCReference Include="ORM\ORM.OrdServ.pas"/>
+        <DCCReference Include="ORM\ORM.Equipamento.pas"/>
+        <DCCReference Include="ORM\ORM.Conta.pas"/>
+        <DCCReference Include="ORM\ORM.PedidoMaterial.pas"/>
+        <DCCReference Include="ORM\ORM.Fornecedor.pas"/>
+        <DCCReference Include="ORM\ORM.tabirpf.pas"/>
+        <DCCReference Include="ORM\ORM.Entrada.pas"/>
+        <DCCReference Include="ORM\ORM.saida.pas"/>
+        <DCCReference Include="ORM\ORM.Transportadora.pas"/>
+        <DCCReference Include="ORM\ORM.Pedido.pas"/>
+        <DCCReference Include="ORM\ORM.rpa.pas"/>
+        <DCCReference Include="ORM\ORM.ITSaida.pas"/>
+        <DCCReference Include="ORM\ORM.Report.pas"/>
+        <DCCReference Include="ORM\ORM.Turma.pas"/>
+        <DCCReference Include="ORM\ORM.UF.pas"/>
+        <DCCReference Include="ORM\ORM.Municipio.pas"/>
+        <DCCReference Include="ORM\ORM.Cest.pas"/>
+        <DCCReference Include="ORM\ORM.TpAprovacao.pas"/>
+        <DCCReference Include="ORM\ORM.Grupos.pas"/>
+        <DCCReference Include="ORM\ORM.ReportUser.pas"/>
+        <DCCReference Include="ORM\ORM.Formulacao.pas"/>
+        <DCCReference Include="ORM\ORM.TpCorrecao.pas"/>
+        <DCCReference Include="ORM\ORM.CFOP.pas"/>
+        <DCCReference Include="ORM\ORM.Pais.pas"/>
+        <DCCReference Include="ORM\ORM.RHOcorrencia.pas"/>
+        <DCCReference Include="ORM\ORM.TpCobranca.pas"/>
+        <DCCReference Include="ORM\ORM.TpFrete.pas"/>
+        <DCCReference Include="ORM\ORM.Periodicidade.pas"/>
+        <DCCReference Include="ORM\ORM.adntfornecedor.pas"/>
+        <DCCReference Include="ORM\ORM.Lp1a.pas"/>
+        <DCCReference Include="ORM\ORM.Condpagto.pas"/>
+        <DCCReference Include="ORM\ORM.AtivoPisCofins.pas"/>
+        <DCCReference Include="ORM\ORM.Negociacao.pas"/>
+        <DCCReference Include="ORM\orm.plconta.pas"/>
+        <DCCReference Include="ORM\orm.cntcusto.pas"/>
+        <DCCReference Include="ORM\orm.baixa.pas"/>
+        <DCCReference Include="ORM\orm.plcontarateio.pas"/>
+        <DCCReference Include="ORM\orm.CntcustoRateio.pas"/>
+        <DCCReference Include="ORM\orm.itentrada.pas"/>
+        <DCCReference Include="ORM\orm.tpentrada.pas"/>
+        <DCCReference Include="ORM\orm.tpmovto.pas"/>
+        <DCCReference Include="ORM\orm.STApontamentoManual.pas"/>
+        <DCCReference Include="ORM\orm.TpApontamentoManual.pas"/>
+        <DCCReference Include="ORM\orm.HAprovacaoAutpagto.pas"/>
+        <DCCReference Include="ORM\orm.Rmatividade.pas"/>
+        <DCCReference Include="ORM\orm.ClienteEntrega.pas"/>
+        <DCCReference Include="ORM\orm.StCliente.pas"/>
+        <DCCReference Include="ORM\orm.TpClienteMensalidade.pas"/>
+        <DCCReference Include="ORM\orm.TpCliente.pas"/>
+        <DCCReference Include="ORM\orm.ItClienteCampanha.pas"/>
+        <DCCReference Include="ORM\orm.ItClienteEmail.pas"/>
+        <DCCReference Include="ORM\orm.ItContCliente.pas"/>
+        <DCCReference Include="ORM\orm.ItCobranca.pas"/>
+        <DCCReference Include="ORM\orm.Parcela.pas"/>
+        <DCCReference Include="ORM\orm.Itcondpagto.pas"/>
+        <DCCReference Include="ORM\orm.Stcondpagto.pas"/>
+        <DCCReference Include="ORM\orm.SetBoleto.pas"/>
+        <DCCReference Include="ORM\orm.TpConta.pas"/>
+        <DCCReference Include="ORM\orm.ItContratoPaciente.pas"/>
+        <DCCReference Include="ORM\orm.ItContratoParcela.pas"/>
+        <DCCReference Include="ORM\orm.ItContratoNegociacao.pas"/>
+        <DCCReference Include="ORM\orm.TpContrato.pas"/>
+        <DCCReference Include="ORM\orm.ItContrato.pas"/>
+        <DCCReference Include="Pessoal\Pessoal.Turno.pas">
+            <Form>frmTurno</Form>
+        </DCCReference>
+        <DCCReference Include="Pessoal\Pessoal.PontoTrabalho.pas">
+            <Form>frmpontotrabalho</Form>
+        </DCCReference>
+        <DCCReference Include="Pessoal\Pessoal.RhOcorrencia.pas">
+            <Form>frmRHOcorrencia</Form>
+        </DCCReference>
+        <DCCReference Include="Pessoal\Pessoal.Treinamento.pas">
+            <Form>frmTreinamento</Form>
+        </DCCReference>
+        <DCCReference Include="Pessoal\Pessoal.DespesaConvenio.pas">
+            <Form>frmdespesaconvenio</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.Formulacao.pas">
+            <Form>frmFormulacao</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.CorridaQuimica.pas">
+            <Form>frmcorridaquimica</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.Parada.pas">
+            <Form>frmparada</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.Ordproducao.pas">
+            <Form>frmordproducao</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.Apontamento.pas">
+            <Form>frmapontamento</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.RequisicaoProducao.pas">
+            <Form>frmrequisicaoproducao</Form>
+        </DCCReference>
+        <DCCReference Include="Producao\Producao.apontamentomanual.pas">
+            <Form>frmApontamentoManual</Form>
+        </DCCReference>
+        <DCCReference Include="Recalculo\Recalcular.PisCofins.pas"/>
+        <DCCReference Include="Recalculo\Recalcular.Comissao.pas"/>
+        <DCCReference Include="Recalculo\Recalculo.SaidaPedidoQtAtendida.pas"/>
+        <DCCReference Include="Recalculo\Recalculo.Adntcliente.Saldo.pas"/>
+        <DCCReference Include="Recalculo\Recalculo.CustoMedio.pas"/>
+        <DCCReference Include="Recalculo\Recalculo.SaldoConta.pas"/>
+        <DCCReference Include="Recalculo\Recalculo.EstoqueTerceiro.pas"/>
+        <DCCReference Include="Rotina\Rotina.XLConst.pas"/>
+        <DCCReference Include="Rotina\Rotina.Tipo.pas"/>
+        <DCCReference Include="Rotina\Rotina.Protector.pas"/>
+        <DCCReference Include="Rotina\Rotina.Numero.pas"/>
+        <DCCReference Include="Rotina\Rotina.DataHora.pas"/>
+        <DCCReference Include="Rotina\Rotina.Replicacao.pas"/>
+        <DCCReference Include="Rotina\Rotina.RegistroIb.pas"/>
+        <DCCReference Include="Rotina\Rotina.Rotinas.pas"/>
+        <DCCReference Include="Rotina\Rotina.Registro.pas"/>
+        <DCCReference Include="Rotina\Rotina.System.pas"/>
+        <DCCReference Include="Rotina\Rotina.Interbase.pas"/>
+        <DCCReference Include="Rotina\Rotina.ValidaDocumento.pas"/>
+        <DCCReference Include="Rotina\Rotina.Strings.pas"/>
+        <DCCReference Include="Rotina\Rotina.MontarSQL.pas"/>
+        <DCCReference Include="Rotina\Rotina.Arquivo.pas"/>
+        <DCCReference Include="Rotina\Rotina.Retornasql.pas"/>
+        <DCCReference Include="Rotina\Rotina.Consiste.pas"/>
+        <DCCReference Include="Rotina\Rotina.Sqlmontar.pas"/>
+        <DCCReference Include="Rotina\Rotina.AdicionarListView.pas"/>
+        <DCCReference Include="Rotina\Rotina.Consulta.pas"/>
+        <DCCReference Include="Rotina\Rotina.GerarProdutoMensalidade.pas"/>
+        <DCCReference Include="Tipo\TpResposta.pas">
+            <Form>frmTpResposta</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpCriterioOrcamento.pas">
+            <Form>frmtpcriterioorcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpEntrada.pas">
+            <Form>frmtpentrada</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpProduto.pas">
+            <Form>frmtpproduto</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpSaida.pas">
+            <Form>frmtpsaida</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpAprovacao.pas">
+            <Form>frmtpaprovacao</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpOrdserv.pas">
+            <Form>frmtpordserv</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpAnotacao.pas">
+            <Form>frmtpanotacao</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpLocacao.pas">
+            <Form>frmtplocacao</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpPedido.pas">
+            <Form>frmtppedido</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpOrdcompra.pas">
+            <Form>frmtpordcompra</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpPedidomaterial.pas">
+            <Form>frmtppedidomaterial</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpRim.pas">
+            <Form>frmtprim</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpOrcamento.pas">
+            <Form>frmtporcamento</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpFaturamento.pas">
+            <Form>frmtpfaturamento</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpEquipamento.pas">
+            <Form>frmtpequipamento</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpContrato.pas">
+            <Form>frmtpcontrato</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpOrdproducao.pas">
+            <Form>frmtpordproducao</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpEmbarque.pas">
+            <Form>frmtpembarque</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpApontamentoManual.pas">
+            <Form>frmtpapontamentomanual</Form>
+        </DCCReference>
+        <DCCReference Include="Tipo\TpCorrecao.pas">
+            <Form>frmtpcorrecao</Form>
+        </DCCReference>
+        <DCCReference Include="Usuario\Usuario.Papel.pas">
+            <Form>frmPapel</Form>
+        </DCCReference>
+        <DCCReference Include="Usuario\Usuario.Aplicacao.pas">
+            <Form>frmAplicacao</Form>
+        </DCCReference>
+        <DCCReference Include="Usuario\Usuario.Usuario.pas">
+            <Form>frmUsuario</Form>
+        </DCCReference>
+        <DCCReference Include="Usuario\Usuario.Permissao.pas">
+            <Form>frmPermissao</Form>
+        </DCCReference>
+        <DCCReference Include="ORM\orm.FretePedagio.pas"/>
+        <DCCReference Include="ORM\orm.ctetpmedida.pas"/>
+        <DCCReference Include="ORM\orm.CteTpvlprestacao.pas"/>
+        <DCCReference Include="ORM\orm.ItCartaCorrecaoCte.pas"/>
+        <DCCReference Include="ORM\orm.CTEInutilizacao.pas"/>
+        <DCCReference Include="ORM\orm.CTEVlPrestacao.pas"/>
+        <DCCReference Include="ORM\orm.CTEInformacaoSeguro.pas"/>
+        <DCCReference Include="ORM\orm.ItCTEDocumentoAnterior.pas"/>
+        <DCCReference Include="ORM\orm.CTEDocumentoAnterior.pas"/>
+        <DCCReference Include="ORM\orm.CartaCorrecaoCTE.pas"/>
+        <DCCReference Include="ORM\orm.CTETransportadora.pas"/>
+        <DCCReference Include="ORM\orm.CTERemetenteNota.pas"/>
+        <DCCReference Include="ORM\orm.CTEQTDCarga.pas"/>
+        <DCCReference Include="ORM\orm.Veiculo.pas"/>
+        <DCCReference Include="ORM\orm.ItRegCobranca.pas"/>
+        <DCCReference Include="ORM\orm.TpEmbarque.pas"/>
+        <DCCReference Include="ORM\orm.rateiocntcusto.pas"/>
+        <DCCReference Include="ORM\orm.rateioplconta.pas"/>
+        <DCCReference Include="ORM\orm.strateioplconta.pas"/>
+        <DCCReference Include="Model\ORM\Model.ORM.Interfaces.pas"/>
+        <DCCReference Include="ORM\orm.strateiocntcusto.pas"/>
+        <DCCReference Include="ORM\orm.itrateioplconta.pas"/>
+        <DCCReference Include="ORM\orm.itrateiocntcusto.pas"/>
+        <DCCReference Include="ORM\orm.ItMovto.pas"/>
+        <DCCReference Include="ORM\orm.itembarque.pas"/>
+        <DCCReference Include="ORM\orm.TpEquipamentoPreco.pas"/>
+        <DCCReference Include="ORM\orm.tpequipamento.pas"/>
+        <DCCReference Include="ORM\orm.TpTemporizador.pas"/>
+        <DCCReference Include="ORM\orm.ItFatCliente.pas"/>
+        <DCCReference Include="ORM\orm.ItFatPedido.pas"/>
+        <DCCReference Include="ORM\orm.ItFatProduto.pas"/>
+        <DCCReference Include="ORM\orm.ItFatSaida.pas"/>
+        <DCCReference Include="ORM\orm.StFaturamento.pas"/>
+        <DCCReference Include="ORM\orm.TpFaturamento.pas"/>
+        <DCCReference Include="ORM\orm.RegiaoAplicacao.pas"/>
+        <DCCReference Include="ORM\orm.ItFormulacao.pas"/>
+        <DCCReference Include="ORM\orm.StFormulacao.pas"/>
+        <DCCReference Include="ORM\orm.ItFornecedorConta.pas"/>
+        <DCCReference Include="ORM\orm.ItfornecedorEmail.pas"/>
+        <DCCReference Include="ORM\orm.clfornecedor.pas"/>
+        <DCCReference Include="ORM\orm.Stfornecedor.pas"/>
+        <DCCReference Include="ORM\orm.ItContFornecedor.pas"/>
+        <DCCReference Include="ORM\orm.ItImportacao.pas"/>
+        <DCCReference Include="ORM\orm.StLocacao.pas"/>
+        <DCCReference Include="ORM\orm.LocacaoPeriodo.pas"/>
+        <DCCReference Include="ORM\orm.HStLocacao.pas"/>
+        <DCCReference Include="ORM\orm.LocacaoDevolucao.pas"/>
+        <DCCReference Include="ORM\orm.TpLocacao.pas"/>
+        <DCCReference Include="ORM\orm.Hstordproducao.pas"/>
+        <DCCReference Include="ORM\orm.TpOrdproducao.pas"/>
+        <DCCReference Include="ORM\orm.ItOrdProducaoRecurso.pas"/>
+        <DCCReference Include="ORM\orm.hcontasaldo.pas"/>
+        <DCCReference Include="ORM\orm.itfuncionariodependente.pas"/>
+        <DCCReference Include="ORM\orm.Lp1aAtivoPisCofins.pas"/>
+        <DCCReference Include="ORM\orm.Lp1aCiapi.pas"/>
+        <DCCReference Include="ORM\orm.ItRegApuracao.pas"/>
+        <DCCReference Include="ORM\orm.ItApuracao.pas"/>
+        <DCCReference Include="ORM\orm.ItApuf.pas"/>
+        <DCCReference Include="ORM\orm.ItUfp1a.pas"/>
+        <DCCReference Include="ORM\orm.ItLp1a.pas"/>
+        <DCCReference Include="ORM\orm.TpMDFE.pas"/>
+        <DCCReference Include="ORM\orm.MDFEveiculo.pas"/>
+        <DCCReference Include="ORM\orm.MDFETransportadora.pas"/>
+        <DCCReference Include="ORM\orm.MDFEPedagio.pas"/>
+        <DCCReference Include="ORM\orm.MDFECarregamento.pas"/>
+        <DCCReference Include="ORM\orm.MDFELacre.pas"/>
+        <DCCReference Include="ORM\orm.MDFENFE.pas"/>
+        <DCCReference Include="ORM\orm.MDFECTE.pas"/>
+        <DCCReference Include="ORM\orm.MDFEDescarregamento.pas"/>
+        <DCCReference Include="ORM\orm.MDFEMunicipioPercurso.pas"/>
+        <DCCReference Include="ORM\orm.MDFEUFPercurso.pas"/>
+        <DCCReference Include="ORM\orm.TpModulo.pas"/>
+        <DCCReference Include="ORM\orm.Movimentacao.pas"/>
+        <DCCReference Include="ORM\orm.NegociacaoSaida.pas"/>
+        <DCCReference Include="ORM\orm.NegociacaoEntrada.pas"/>
+        <DCCReference Include="ORM\orm.StNegociacao.pas"/>
+        <DCCReference Include="ORM\orm.StOrcamento.pas"/>
+        <DCCReference Include="ORM\orm.itorcamentocusto.pas"/>
+        <DCCReference Include="ORM\orm.itorcamentomaterial.pas"/>
+        <DCCReference Include="ORM\orm.ItorcamentoRecurso.pas"/>
+        <DCCReference Include="ORM\orm.ITorcamento.pas"/>
+        <DCCReference Include="ORM\orm.TPOrcamento.pas"/>
+        <DCCReference Include="ORM\orm.OrdcompraAprovacao.pas"/>
+        <DCCReference Include="ORM\orm.OrdCompraAutpagto.pas"/>
+        <DCCReference Include="ORM\orm.ITordcompra.pas"/>
+        <DCCReference Include="ORM\orm.TpOrdCompra.pas"/>
+        <DCCReference Include="ORM\orm.StOrdCompra.pas"/>
+        <DCCReference Include="ORM\orm.ItOrdProducaoMaterial.pas"/>
+        <DCCReference Include="ORM\orm.ItOrdproducaoCusto.pas"/>
+        <DCCReference Include="ORM\orm.ItOrdproducao.pas"/>
+        <DCCReference Include="ORM\orm.HCustoMedio.pas"/>
+        <DCCReference Include="ORM\orm.ItGradeValor.pas"/>
+        <DCCReference Include="ORM\orm.TpGradeValor.pas"/>
+        <DCCReference Include="ORM\orm.Unidade.pas"/>
+        <DCCReference Include="ORM\orm.Norma.pas"/>
+        <DCCReference Include="ORM\orm.Forma.pas"/>
+        <DCCReference Include="ORM\orm.Material.pas"/>
+        <DCCReference Include="ORM\orm.Grupo.pas"/>
+        <DCCReference Include="ORM\orm.Modbcsticms.pas"/>
+        <DCCReference Include="ORM\orm.Modbcicms.pas"/>
+        <DCCReference Include="ORM\orm.ProdutoFornecedor.pas"/>
+        <DCCReference Include="ORM\orm.itprodutocusto.pas"/>
+        <DCCReference Include="ORM\orm.ProdutoFormulacao.pas"/>
+        <DCCReference Include="ORM\orm.ItProdutoRecurso.pas"/>
+        <DCCReference Include="ORM\orm.ItProdutoMaterial.pas"/>
+        <DCCReference Include="ORM\orm.TPProduto.pas"/>
+        <DCCReference Include="ORM\orm.Prioridade.pas"/>
+        <DCCReference Include="ORM\orm.ItOrdserv.pas"/>
+        <DCCReference Include="ORM\orm.ItAcessorio.pas"/>
+        <DCCReference Include="ORM\orm.ItDefApr.pas"/>
+        <DCCReference Include="ORM\orm.TPOrdserv.pas"/>
+        <DCCReference Include="ORM\orm.ParcelamentoEntrada.pas"/>
+        <DCCReference Include="ORM\orm.ParcelamentoSaida.pas"/>
+        <DCCReference Include="ORM\orm.StParcelamento.pas"/>
+        <DCCReference Include="ORM\orm.PedidoDuplicata.pas"/>
+        <DCCReference Include="ORM\orm.ItPedidoEstrutura.pas"/>
+        <DCCReference Include="ORM\orm.ITPedido.pas"/>
+        <DCCReference Include="ORM\orm.stpedido.pas"/>
+        <DCCReference Include="ORM\orm.TPPedido.pas"/>
+        <DCCReference Include="ORM\orm.HStPedidoMaterial.pas"/>
+        <DCCReference Include="ORM\orm.StPedidoMaterial.pas"/>
+        <DCCReference Include="ORM\orm.TpPedidoMaterial.pas"/>
+        <DCCReference Include="ORM\orm.PedidoMaterialFornecedor.pas"/>
+        <DCCReference Include="ORM\orm.ItPedidoMaterialFornecedor.pas"/>
+        <DCCReference Include="ORM\orm.ItPedidoMaterial.pas"/>
+        <DCCReference Include="ORM\orm.TpAbono.pas"/>
+        <DCCReference Include="ORM\orm.ItTurno.pas"/>
+        <DCCReference Include="ORM\orm.Turno.pas"/>
+        <DCCReference Include="ORM\orm.CartaoPonto.pas"/>
+        <DCCReference Include="ORM\orm.FolhaPonto.pas"/>
+        <DCCReference Include="ORM\orm.ItRegraStMVA.pas"/>
+        <DCCReference Include="ORM\orm.ItRegraST.pas"/>
+        <DCCReference Include="ORM\orm.StRepresentante.pas"/>
+        <DCCReference Include="ORM\orm.ItRequisicaoProducao.pas"/>
+        <DCCReference Include="ORM\orm.STRequisicaoProducao.pas"/>
+        <DCCReference Include="ORM\orm.TPRequisicaoProducao.pas"/>
+        <DCCReference Include="ORM\orm.ItRim.pas"/>
+        <DCCReference Include="ORM\orm.TpRim.pas"/>
+        <DCCReference Include="ORM\orm.ItRotaValor.pas"/>
+        <DCCReference Include="ORM\orm.ItRota.pas"/>
+        <DCCReference Include="ORM\orm.TpRota.pas"/>
+        <DCCReference Include="ORM\orm.TpAprovacaoUsuarios.pas"/>
+        <DCCReference Include="ORM\orm.TpAprovacaoGrupos.pas"/>
+        <DCCReference Include="ORM\orm.ItTpCorrecao.pas"/>
+        <DCCReference Include="ORM\orm.ITTransportadoraEmail.pas"/>
+        <DCCReference Include="ORM\orm.StTransportadora.pas"/>
+        <DCCReference Include="ORM\orm.STICMS.pas"/>
+        <DCCReference Include="ORM\orm.UFLimite.pas"/>
+        <DCCReference Include="ORM\orm.UFOrigemDestino.pas"/>
+        <DCCReference Include="ORM\orm.hstorcamento.pas"/>
+        <DCCReference Include="ACBR\acbr.MDFEGerar.pas"/>
+        <DCCReference Include="ORM\orm.mdfeinfunidtranspcte.pas"/>
+        <DCCReference Include="ORM\orm.mdfeinfunidcargacte.pas"/>
+        <DCCReference Include="ORM\orm.mdfelacunidtranspcte.pas"/>
+        <DCCReference Include="ORM\orm.mdfelacunidcargacte.pas"/>
+        <DCCReference Include="ORM\orm.mdfeautxml.pas"/>
+        <DCCReference Include="Model\model.mdfe.pas">
+            <Form>dmMdfe</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <None Include="ModelSupport_quipos\default.txvpck"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">quipos.dpr</Source>
+                </Source>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">2</VersionInfo>
+                    <VersionInfo Name="MinorVer">8</VersionInfo>
+                    <VersionInfo Name="Release">11</VersionInfo>
+                    <VersionInfo Name="Build">1285</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1033</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">2.8.11.1285</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">2.8.11.1285</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+            </Platforms>
+            <ModelSupport>True</ModelSupport>
+            <Deployment Version="3">
+                <DeployFile LocalName="..\exe\quipos.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>quipos.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_quipos\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClassesDexFile">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeX86File"/>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1024">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1536">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch2048">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch768">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch320">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640x1136">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements">
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXEntitlements">
+                    <Platform Name="OSX32">
+                        <RemoteDir>..\</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Linux64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="iOSDevice" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+            </Deployment>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
